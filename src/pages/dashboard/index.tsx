@@ -1,10 +1,10 @@
 "use client;";
 
 import { Inter } from "next/font/google";
-import UserStats from "./dashboard/components/user-stats";
-import QuizStats from "./dashboard/components/quiz-stats";
-import NewReportPanel from "./dashboard/components/new-report-panel";
-import PrefShortcut from "./dashboard/components/preference-shortcut";
+import UserStats from "./components/user-stats";
+import QuizStats from "./components/quiz-stats";
+import NewReportPanel from "./components/new-report-panel";
+import PrefShortcut from "./components/preference-shortcut";
 
 const inter = Inter({ subsets: ["latin"] });
 

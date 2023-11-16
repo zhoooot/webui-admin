@@ -17,6 +17,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('preline/plugin'), require("flowbite/plugin")],
+  plugins: [require('preline/plugin'), require("flowbite/plugin"),require("daisyui")],
 }
 export default config

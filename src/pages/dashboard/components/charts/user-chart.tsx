@@ -11,8 +11,8 @@ const DATA = [
       { x: "2022-10-17T12:00Z", y: 16 },
       { x: "2022-10-17T13:00Z", y: 16.5 },
       { x: "2022-10-17T14:00Z", y: 19 },
-      { x: "2022-10-17T15:00Z", y: 20 }
-    ]
+      { x: "2022-10-17T15:00Z", y: 20 },
+    ],
   },
   {
     label: "data2",
@@ -23,18 +23,16 @@ const DATA = [
       { x: "2022-10-17T12:00Z", y: 16 },
       { x: "2022-10-17T13:00Z", y: 11.5 },
       { x: "2022-10-17T14:00Z", y: 12 },
-      { x: "2022-10-17T15:00Z", y: 14.5 }
-    ]
-  }
+      { x: "2022-10-17T15:00Z", y: 14.5 },
+    ],
+  },
 ];
 
-export default function IndexPage() {
+export default function UserChart() {
   return (
-    <div className="min-w-screen min-h-screen flex items-center justify-center px-5 py-5">
-      <div className="w-full max-w-4xl">
-        <div className="p-4 my-6 h-96 rounded-lg bg-white shadow-lg md:shadow-xl relative">
+    <div className="w-full flex items-center justify-center px-5 py-5">
+      <div className="w-full h-96 max-w-4xl">
           <ChartXAxisTime data={DATA} />
-        </div>
       </div>
     </div>
   );
