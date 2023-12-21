@@ -27,6 +27,11 @@ export const ViolationList = [
         details: 'Test Details 5',
         author: 'Test Author 5'
     },
+    {
+        title: 'Test Title 6',
+        details: 'Test Details 6',
+        author: 'Test Author 6'
+    },
 ]
 
 const Violation = () => {
