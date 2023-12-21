@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ViolationReportContainer from './components/new_container';
-import TopBar from './components/top_bar';
 import AppealReportContainer from './components/appeal_container';
 
 export const ViolationList = [
