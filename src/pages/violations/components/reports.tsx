@@ -5,6 +5,7 @@ export interface ViolationReportProps {
     title: string;
     details: string;
     author: string;
+    appeal?: boolean;
 }
 
 const ViolationReport: React.FC<ViolationReportProps> = ({title, details, author}) => {
@@ -15,8 +16,8 @@ const ViolationReport: React.FC<ViolationReportProps> = ({title, details, author
             </div>
 
             <div className="flex flex-col justify-between p-2 bg-purple-300 w-4/6">
-                <h1 className="text-5xl">{title}</h1>
-                <p className="text-xl">{details}</p>
+                <h1 className="text-2xl">{title}</h1>
+                <p className="text-lg">{details}</p>
                 <div className="flex flex-row gap-2">
                     <Image src="/avatar.png" width={20} height={20} alt='user avatar' />
                     <p className="text-sm opacity-75">{author}</p>
