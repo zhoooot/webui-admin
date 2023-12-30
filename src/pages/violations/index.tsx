@@ -42,17 +42,20 @@ export const ViolationList = [
 ]
 
 const Violation = () => {
-    const [view, setView] = useState('none');
-
     return (
 
         <div className="flex flex-col h-screen bg-gray-100">
-            <div className='flex flex-row p-4 gap-2'>
-                <button className='bg-purple-300 hover:bg-purple-500 focus:bg-purple-700 rounded-xl p-1 w-1/2' onClick={() => setView('new')}>New</button>
-                <button className='bg-purple-300 hover:bg-purple-500 focus:bg-purple-700 rounded-xl p-1 w-1/2' onClick={() => setView('appeal')}>Appeal</button>
+            <div role="tablist" className="tabs tabs-lifted w-full h-full">
+                <input type="radio" name="my_tabs_2" role="tab" className="tab [--tab-bg:lightblue]" onChange={() => {}} aria-label="New" />
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    <ViolationReportContainer List={ViolationList}/>
+                </div>
+
+                <input type="radio" name="my_tabs_2" role="tab" className="tab [--tab-bg:lightblue]" onChange={() => {}} aria-label="Appeal" checked />
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    <AppealReportContainer List={ViolationList}/>
+                </div>
             </div>
-            {view === 'new' ? <ViolationReportContainer List={ViolationList}/> : null}
-            {view === 'appeal' ? <AppealReportContainer List={ViolationList}/> : null}
         </div>
     )
 }
