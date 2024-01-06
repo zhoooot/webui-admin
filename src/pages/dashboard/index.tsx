@@ -14,7 +14,7 @@ export default function () {
       <div className="m-2">
         <UserStats></UserStats>
       </div>
-      <div className="flex flex-row [&>*]:m-2">
+      <div className="flex flex-row [&>*]:m-2 w-full justify-items-stretch">
         <QuizStats></QuizStats>
         <NewReportPanel></NewReportPanel>
         <PrefShortcut></PrefShortcut>

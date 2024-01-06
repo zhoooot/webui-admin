@@ -16,7 +16,7 @@ const NewReportStatistics = () : JSX.Element => {
 
 const NewReportPanel = () : JSX.Element => {
     return (
-        <div className="bg-white rounded-lg pl-32 pr-32">
+        <div className="bg-white rounded-lg pl-32 pr-32 flex-grow">
             <NewReportStatistics></NewReportStatistics>
             <button className="btn btn-primary text-white hover:text-white"><text className="active:text-white">See all</text></button>
         </div>

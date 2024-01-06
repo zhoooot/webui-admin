@@ -27,7 +27,7 @@ const UserStats = () => {
   };
 
   return (
-    <div className="bg-white h-min p-12 rounded-lg">
+    <div className="bg-white h-min p-12 rounded-lg flex-grow">
       <div className="flex flex-row">
         <div>
           <text className="text-5xl text-black">3000</text>
