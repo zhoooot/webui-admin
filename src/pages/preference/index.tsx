@@ -21,8 +21,8 @@ const Preference = (): JSX.Element => {
           <option disabled selected>
             Is It Over Now?
           </option>
-          <option>Now That We Don't Talk</option>
-          <option>Say Don't Go</option>
+          <option>{"Now That We Don't Talk"}</option>
+          <option>{"Say Don't Go"}</option>
         </select>
       </div>
       <div className="flex flex-row-reverse">

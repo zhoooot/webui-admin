@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import QuizChart from "./charts/quiz-chart";
 
 enum TIME {
-    THIS_WEEK,
-    THIS_MONTH,
-    LAST_THREE_MONTHS,
-    LAST_SIX_MONTHS,
-  }
+  THIS_WEEK,
+  THIS_MONTH,
+  LAST_THREE_MONTHS,
+  LAST_SIX_MONTHS,
+}
 
 const QuizStats = (): JSX.Element => {
   const [timeState, setTimeState] = useState(TIME.THIS_WEEK);
@@ -43,11 +43,15 @@ const QuizStats = (): JSX.Element => {
               TIME.THIS_MONTH,
               TIME.LAST_THREE_MONTHS,
               TIME.LAST_SIX_MONTHS,
-            ].map((time) => {
+            ].map((time, index) => {
               return (
-                <li>
-                  <a onClick={() => setTimeState(time)}>{getTimeLabel(time)}</a>
-                </li>
+                <div key={index}>
+                  <li>
+                    <a onClick={() => setTimeState(time)}>
+                      {getTimeLabel(time)}
+                    </a>
+                  </li>
+                </div>
               );
             })}
           </ul>
