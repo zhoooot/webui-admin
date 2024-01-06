@@ -14,12 +14,10 @@ export default function () {
       <div className="m-2">
         <UserStats></UserStats>
       </div>
-      <div className="grid grid-flow-row [&>*]:m-2 w-full justify-items-stretch">
+      <div className="flex flex-row [&>*]:m-2 w-full justify-items-stretch">
         <QuizStats></QuizStats>
-        <div className="grid grid-cols-2 gap-4">
-          <NewReportPanel></NewReportPanel>
-          <PrefShortcut></PrefShortcut>
-        </div>
+        <NewReportPanel></NewReportPanel>
+        <PrefShortcut></PrefShortcut>
       </div>
     </div>
   );
