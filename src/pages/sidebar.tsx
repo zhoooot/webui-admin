@@ -1,6 +1,6 @@
 import { Alert } from "flowbite-react";
 import { useState } from "react";
-import { ViolationList } from "./violations";
+import { ViolationList } from './violations/test_data/data';
 
 const SideBar = (): JSX.Element => {
 

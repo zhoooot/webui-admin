@@ -6,9 +6,11 @@ export interface ViolationReportProps {
     details: string;
     author: string;
     appeal?: boolean;
+    onBanClick?: () => void;
+    onPermitClick?: () => void;
 }
 
-const ViolationReport: React.FC<ViolationReportProps> = ({title, details, author}) => {
+const ViolationReport: React.FC<ViolationReportProps> = ({title, details, author, appeal, onBanClick, onPermitClick}) => {
     return (
         <div className="rounded-3xl flex flex-row h-42 w-full">
             <div className="flex rounded-s-3xl bg-gray-300 w-1/6 relative overflow-clip">
@@ -25,8 +27,12 @@ const ViolationReport: React.FC<ViolationReportProps> = ({title, details, author
             </div>
 
             <div className='flex flex-row rounded-e-3xl items-end w-1/6 p-2 gap-2 bg-purple-300'>
-                <button className='bg-green-300 hover:bg-green-500 rounded-xl p-1 w-1/2'>Permit</button>
-                <button className='bg-red-300 hover:bg-red-500 rounded-xl p-1 w-1/2'>Ban</button>
+                {appeal? null : (
+                    <button className='bg-green-300 hover:bg-green-500 rounded-xl p-1 w-1/2' onClick={onPermitClick}>Permit</button>
+                )}
+                {appeal? null : 
+                    (<button className='bg-red-300 hover:bg-red-500 rounded-xl p-1 w-1/2' onClick={onBanClick}>Ban</button>
+                )}
             </div>
         </div>
     )
