@@ -89,3 +89,5 @@ export const BarChart = ({ data }: ChartDataPoint) => {
 
   return <Bar options={options} data={{ datasets }} />;
 };
+
+export default BarChart;

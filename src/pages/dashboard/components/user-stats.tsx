@@ -40,11 +40,13 @@ const UserStats = () => {
         <details className="dropdown">
           <summary className="m-1 btn">{getTimeLabel(timeState)}</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-            { [TIME.THIS_WEEK, TIME.THIS_MONTH, TIME.LAST_THREE_MONTHS, TIME.LAST_SIX_MONTHS].map((time) => {
+            { [TIME.THIS_WEEK, TIME.THIS_MONTH, TIME.LAST_THREE_MONTHS, TIME.LAST_SIX_MONTHS].map((time, index) => {
               return (
+                <div key={index}>
                 <li>
                   <a onClick={() => setTimeState(time)}>{getTimeLabel(time)}</a>
                 </li>
+                </div>
               );
             })}
           </ul>

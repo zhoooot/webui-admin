@@ -144,3 +144,5 @@ export const ChartXAxisTime = ({ data }: ChartDataPoint) => {
 
   return <Line options={options} data={{ datasets }} />;
 };
+
+export default ChartXAxisTime;

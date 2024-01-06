@@ -8,7 +8,7 @@ import PrefShortcut from "./dashboard/components/preference-shortcut";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function () {
+const Hompage = () => {
   return (
     <div>
       <div className="m-2">
@@ -24,3 +24,5 @@ export default function () {
     </div>
   );
 }
+
+export default Hompage;
