@@ -13,7 +13,9 @@ const Preference = (): JSX.Element => {
 
         <ThemeOption type="winter"></ThemeOption>
       </div>
-      <text className="text-black text-3xl">Background Music</text>
+      <div className="mt-4 mb-2">
+        <text className="text-black text-3xl">Background Music</text>
+      </div>
       <div>
         <select className="select select-bordered w-full max-w-xs">
           <option disabled selected>
