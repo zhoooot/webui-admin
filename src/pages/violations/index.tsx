@@ -49,4 +49,3 @@ const Violation = (): JSX.Element => {
 };
 
 export default Violation;
-

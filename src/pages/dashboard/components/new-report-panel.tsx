@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import { GiBellShield } from "react-icons/gi";
 
@@ -23,7 +24,11 @@ const NewReportPanel = () : JSX.Element => {
     return (
         <div className="bg-white rounded-lg pl-32 pr-32 flex flex-col flex-grow justify-center [&>*]:m-2">
             <NewReportStatistics></NewReportStatistics>
-            <button className="btn btn-primary text-white hover:text-white"><text className="active:text-white">See all</text></button>
+            <button className="btn btn-primary text-white hover:text-white">
+                <Link href="/violations/">
+                    <text className="active:text-white">See all</text>
+                </Link>
+                </button>
         </div>
     )    
 }
