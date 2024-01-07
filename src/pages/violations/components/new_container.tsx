@@ -16,7 +16,7 @@ const ViolationReportContainer: React.FC<ViolationReportContainerProp> = ({ List
     };
 
     return (
-        <div className="flex flex-col h-screen overflow-y-scroll bg-white gap-2 w-full p-4">
+        <div className="flex flex-col h-full bg-white gap-2 w-full p-4 overflow-auto">
             {violations.map((violation, index) => (
                 violation.appeal ? null : (
                     <ViolationReport

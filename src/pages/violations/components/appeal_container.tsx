@@ -7,7 +7,7 @@ interface AppealReportContainerProp {
 
 const AppealReportContainer: React.FC<AppealReportContainerProp> = ({ List }) => {
     return (
-        <div className="flex flex-col h-screen overflow-y-scroll bg-white gap-2 w-full p-4">
+        <div className="flex flex-col h-full bg-white gap-2 w-full p-4 overflow-auto">
             {List.map((violation, index) => (
                 violation.appeal ? (
                     <ViolationReport

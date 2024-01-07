@@ -12,7 +12,7 @@ export interface ViolationReportProps {
 
 const ViolationReport: React.FC<ViolationReportProps> = ({title, details, author, appeal, onBanClick, onPermitClick}) => {
     return (
-        <div className="rounded-3xl flex flex-row h-42 w-full">
+        <div className="rounded-3xl flex flex-row h-42 w-full border border-1 border-gray-400">
             <div className="flex rounded-s-3xl bg-gray-300 w-1/6 relative overflow-clip">
                 <Image className='absolute top-0 left-0 w-full h-full' src="/winter.png" alt='image' layout='fill' objectFit='cover' />
             </div>
