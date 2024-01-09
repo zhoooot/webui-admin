@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 export interface ViolationReportProps {
+    vio_id: string;
     title: string;
     details: string;
     author: string;
