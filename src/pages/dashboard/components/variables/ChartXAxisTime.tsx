@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import "chartjs-adapter-luxon";
+import IChartData from "../../interface/IUserChartData";
 
 ChartJS.register(
   CategoryScale,
@@ -119,18 +120,7 @@ export const options = {
   };
   */
 
-interface ChartDataPoint {
-  data: {
-    label: string;
-    color: string;
-    values: {
-      x: string;
-      y: number;
-    }[];
-  }[];
-}
-
-export const ChartXAxisTime = ({ data }: ChartDataPoint) => {
+export const ChartXAxisTime = ({ data }: IChartData) => {
   const datasets = data.map((set) => {
     return {
       label: set.label,

@@ -1,38 +1,32 @@
 import colors from "tailwindcss/colors";
 import { ChartXAxisTime } from "../variables/ChartXAxisTime";
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
+import IChartData from "../../interface/IUserChartData";
 
-const DATA = [
-  {
-    label: "data1",
-    color: colors.orange[500],
-    values: [
-      { x: "2022-10-17T10:00Z", y: 17.1 },
-      { x: "2022-10-17T11:00Z", y: 17.2 },
-      { x: "2022-10-17T12:00Z", y: 16 },
-      { x: "2022-10-17T13:00Z", y: 16.5 },
-      { x: "2022-10-17T14:00Z", y: 19 },
-      { x: "2022-10-17T15:00Z", y: 20 },
-    ],
-  },
-  {
-    label: "data2",
-    color: colors.sky[400],
-    values: [
-      { x: "2022-10-17T10:00Z", y: 19.1 },
-      { x: "2022-10-17T11:00Z", y: 15.2 },
-      { x: "2022-10-17T12:00Z", y: 16 },
-      { x: "2022-10-17T13:00Z", y: 11.5 },
-      { x: "2022-10-17T14:00Z", y: 12 },
-      { x: "2022-10-17T15:00Z", y: 14.5 },
-    ],
-  },
-];
+export default function UserChart(props: IChartData) {
 
-export default function UserChart() {
+  const [data, setData] = useState([
+    {
+      label: "data1",
+      color: colors.orange[500],
+      values: [
+        { x: "2022-10-17T10:00Z", y: 17.1 },
+        { x: "2022-10-17T11:00Z", y: 17.2 },
+        { x: "2022-10-17T12:00Z", y: 16 },
+        { x: "2022-10-17T13:00Z", y: 16.5 },
+        { x: "2022-10-17T14:00Z", y: 19 },
+        { x: "2022-10-17T15:00Z", y: 20 },
+      ],
+    },
+  ]);
+
+  
+
   return (
     <div className="w-full flex items-center justify-center px-5 py-5">
       <div className="w-full h-96 max-w-4xl">
-          <ChartXAxisTime data={DATA} />
+        <ChartXAxisTime data={props.data} />
       </div>
     </div>
   );

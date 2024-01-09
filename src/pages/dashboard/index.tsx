@@ -5,10 +5,14 @@ import UserStats from "./components/user-stats";
 import QuizStats from "./components/quiz-stats";
 import NewReportPanel from "./components/new-report-panel";
 import PrefShortcut from "./components/preference-shortcut";
+import React, { createContext } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Dashboard = () => {
+  const UserContext = React.createContext(7);
+  const QuizContext = React.createContext(7);
+
   return (
     <div>
       <div className="m-2">
@@ -23,6 +27,6 @@ const Dashboard = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Dashboard;
